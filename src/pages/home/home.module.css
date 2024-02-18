@@ -1,39 +1,32 @@
-
-
-.main{
-    background-color:white;
-    height: 700px;
-    width:1200px;
+.homeMain{
+    background-color: white;
+    height: 100%;
+    width:1000px;
     padding: 10px;
-    /* display: flex;
-    gap:10px; */
-
-
-    
 }
-.inner{
+.homeTitle{
+    font-size: medium;
+    font-weight: 600;
+
+}
+
+.homeDropdown{
+    background-color:rgb(231, 237, 242);
+    border-radius: 6px;
+    padding: 4px;
     display: flex;
-    display: flex;
-    gap:10px;
-}
-
-.quiz{
-    font: bold;
-    font-size: small;
-    background-color:white;
-    height:100%;
-    width:700px;
-    display:flex;
-    flex-wrap: wrap;
-    /* width: 70%; */
-    gap:5px; 
-}
-
-.progress{
-    display:flex;
-    gap:5px; 
+    justify-content: center;
+    align-items: center;
     
-        
+    width:fit-content;
+
+    select{
+        border: none;
+        background:transparent;
+        outline: none;
+        font-size: x-small;
+
+    }
     
 
 }
