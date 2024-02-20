@@ -4,20 +4,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LogIn from "./pages/auth/LogIn";
 import SignUp from "./pages/auth/SignUp";
+import Home from './pages/home/Home';
+import Navbar from './component/navbar/Navbar';
+import QuizPage from './pages/quiz/QuizPage';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<LogIn />} />
+<BrowserRouter>
+<div className="appFlex">
+<Navbar></Navbar>
+<Routes>
+  <Route path='/' element={<Home></Home>}/>
+  <Route path="/quiz" element={<QuizPage></QuizPage>}/>
+  <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
-       
-        
+  
+</Routes>
+</div>
 
-
-      </Routes>
-    </BrowserRouter>
-  );
+</BrowserRouter>
+     );
 }
 
 export default App;
