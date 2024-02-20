@@ -1,0 +1,65 @@
+.qMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.qAuth {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 400px;
+  
+}
+.qInput {
+    background-color: rgb(233, 233, 252);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    width: 370px;
+  
+    
+  }
+.qInner {
+  font: 200px; 
+  display: flex;
+  align-items:center;
+
+  justify-content:center;
+}
+.loginB {
+  height: 35px;
+  width: 400px;
+  background-color: rgb(19, 173, 219);
+  color: white;
+  border-radius: 8px;
+
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+}
+.qelse {
+  color: rgb(23, 160, 194);
+  font-size: medium;
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+    background-color: transparent;
+    border:none;
+    outline: none;
+    width: 100%;
+  }
+ 
+  
+.qUnderline:hover{
+    text-decoration: underline;
+    color: rgb(63, 193, 216);
+
+}
