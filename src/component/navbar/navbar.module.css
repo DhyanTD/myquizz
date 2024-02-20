@@ -18,6 +18,7 @@
     display:flex;
     gap: 3px;
     align-items:center;
+    padding:4px;
     
     
 
@@ -25,6 +26,7 @@
 .nbInnerFlex:hover{
     background-color:rgb(217, 225, 231);
     border-radius: 6px;
+   
 }
 
 
