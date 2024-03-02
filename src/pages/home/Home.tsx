@@ -1,8 +1,12 @@
 import styles from "./home.module.css";
 import { FcSearch } from "react-icons/fc";
 import { BsDot } from "react-icons/bs";
+import Quiz1 from "../../components/quiz1/Quiz1";
+import {useState} from "react";
+
 
 function Home() {
+  const [selectedQuiz,setSelectedQuiz]=useState({});
   const details = [
     {
       title: "Final exam",
@@ -43,8 +47,13 @@ function Home() {
       question: "10 questions",
     },
   ];
+
+  console.log("whats in selectedQuiz", selectedQuiz);
+  
   return (
     <>
+
+    {Object.keys(selectedQuiz).length===0 ? (<>
       <div className={styles.homeMain}>
         <div className={styles.homeTitle}>
           <p>Quizzes</p>
@@ -85,7 +94,7 @@ function Home() {
         <div>
           {details.map((values) => (
             <>
-              <div className={styles.homeQlist}>
+              <div className={styles.homeQlist} onClick={()=>{setSelectedQuiz(values)}}>
                 <div
                   className={styles.subtitle}
                   style={{ marginTop: "0px", marginBottom: "0px" }}
@@ -138,7 +147,10 @@ function Home() {
         </div>
 
 
-      </div>
+      </div></>) : (<> <Quiz1 selected={selectedQuiz} ></Quiz1></>)}
+
+
+     
     </>
   );
 }

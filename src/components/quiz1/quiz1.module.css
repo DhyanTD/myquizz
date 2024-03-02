@@ -1,0 +1,19 @@
+.quizMain{
+    background-color:gray;
+    height: 600px;
+    width:300px;
+    padding:10px;
+    margin-left:auto;
+    margin-right: auto;
+    
+
+
+}
+.qHeading{
+    font-size: medium;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap:8px;
+    
+}

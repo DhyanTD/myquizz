@@ -7,6 +7,8 @@ import SignUp from "./pages/auth/SignUp";
 import Home from './pages/home/Home';
 import Navbar from './component/navbar/Navbar';
 import QuizPage from './pages/quiz/QuizPage';
+import QuizDetails from "./pages/quizDetails/QuizDetails";
+
 
 
 function App() {
@@ -18,7 +20,8 @@ function App() {
   <Route path='/' element={<Home></Home>}/>
   <Route path="/quiz" element={<QuizPage></QuizPage>}/>
   <Route path="/login" element={<LogIn />} />
-        <Route path="/signup" element={<SignUp />} />
+  <Route path="/signup" element={<SignUp />} />
+        <Route path="/quizDetails" element={<QuizDetails></QuizDetails>} />
   
 </Routes>
 </div>

@@ -6,53 +6,56 @@ import { HiOutlineDocumentReport } from "react-icons/hi";
 import { SiGoogleclassroom } from "react-icons/si";
 import { PiStudentDuotone } from "react-icons/pi";
 import { RiLogoutBoxRLine } from "react-icons/ri";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+  console.log("printing location", location);
   return (
     <>
-      <div className={styles.nbMain}>
+      {location.pathname === "/quiz" ? null : (
+        <>
+          <div className={styles.nbMain}>
+            <div>
+              <div className={styles.nbInnerFlex}>
+                <IoMdHome />
 
-        <div>
-        <div className={styles.nbInnerFlex}>
-          <IoMdHome />
+                <p style={{ fontSize: "x-small" }}>Home</p>
+              </div>
 
-          <p style={{ fontSize: "x-small" }}>Home</p>
-        </div>
-
-        {/* <div className={styles.nbInnerFlex}>
+              {/* <div className={styles.nbInnerFlex}>
           <MdOutlineQuiz />
 
           <p style={{ fontSize: "x-small" }}>Quizzes</p>
         </div> */}
 
-        <div className={styles.nbInnerFlex}>
-          <HiOutlineDocumentReport />
+              <div className={styles.nbInnerFlex}>
+                <HiOutlineDocumentReport />
 
-          <p style={{ fontSize: "x-small" }}>Report</p>
-        </div>
+                <p style={{ fontSize: "x-small" }}>Report</p>
+              </div>
 
-        <div className={styles.nbInnerFlex}>
-          <SiGoogleclassroom />
+              <div className={styles.nbInnerFlex}>
+                <SiGoogleclassroom />
 
-          <p style={{ fontSize: "x-small" }}>Classes</p>
-        </div>
+                <p style={{ fontSize: "x-small" }}>Classes</p>
+              </div>
 
-        <div className={styles.nbInnerFlex}>
-          <PiStudentDuotone />
+              <div className={styles.nbInnerFlex}>
+                <PiStudentDuotone />
 
-          <p style={{ fontSize: "x-small" }}>Students</p>
-        </div>
+                <p style={{ fontSize: "x-small" }}>Students</p>
+              </div>
+            </div>
 
-        </div>
-        
+            <div className={styles.nbInnerFlex}>
+              <RiLogoutBoxRLine />
 
-
-        <div className={styles.nbInnerFlex}>
-        <RiLogoutBoxRLine />
-
-          <p style={{ fontSize: "x-small" }}>LogOut</p>
-        </div>
-      </div>
+              <p style={{ fontSize: "x-small" }}>LogOut</p>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }
