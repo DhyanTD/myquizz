@@ -2,11 +2,14 @@ import styles from "./quizpage.module.css";
 import { LiaPhoenixSquadron } from "react-icons/lia";
 import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
-
 import { FaRegCircle } from "react-icons/fa";
-<FaRegCircle />;
+import Review from "../../components/quiz/Review";
+import { useState } from "react";
+
 
 function QuizPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const options = [
     {
       option: "Paris",
@@ -25,6 +28,9 @@ function QuizPage() {
   ];
   return (
     <>
+    {!isSubmitted  ? (
+
+    
       <div className={styles.quizPage}>
         <div className={styles.quizHeader}>
           <div className={styles.quizMaster}>
@@ -52,7 +58,7 @@ function QuizPage() {
                 fontWeight: "800",
                 marginTop: "4px",
               }}
-            >
+              >
               What is the capital of France?
             </p>
           </div>
@@ -69,7 +75,7 @@ function QuizPage() {
 
         <div className={styles.submitButton}>
           <button
-            onClick={() => {}}
+            onClick={() => { setIsSubmitted(true) }}
             style={{
               background: "rgb(244, 244, 244)",
               color: "black",
@@ -79,12 +85,19 @@ function QuizPage() {
               fontWeight: "500",
               padding: "6px",
             }}
-          >
+            >
             submit
           </button>
         </div>
       </div>
+
+) :(
+
+  <Review></Review>
+
+  ) }
     </>
+    
   );
 }
 export default QuizPage;
